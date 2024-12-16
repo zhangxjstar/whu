@@ -1,0 +1,23 @@
+Parameters and initial conditions for the UCGXIN2 model  //解释信息，不需修改
+>>>parameters of the Xinanjiang(1) model<<<                 //解释信息，不需修改
+PAR      PARMIN     PARMAX                        //解释信息，不需修改
+250       1.       500.        X(1)(mm)     [Capacity of the production store]
+-2.806    -10.0      10.0         X(2)(mm)  [Water exchange coefficient]
+90        1.       200.        X(3)(mm)  [Capacity of the routing store]
+2         0.1      10.0         X(4)(day)  [Time base of the unit hydrograph]
+0.4        0.1     1.50          CKE               [Evaporation coefficient]
+2        0.2       9       DDF(mm) 
+90        1.       200.         X(2)(mm)  [Water exchange coefficient]
+>>>Initial conditions of the catchment<<<        //解释信息，不需修改（流域初始条件）
+V(1)    V(2)       nwarm       snowpack   
+mm      mm      (warm up period)  //流域初始条件
+25.0   10.0         365      1.0       CONSI
+>>>parameters of the Genetic algrithm optimization<<<  //遗传算法参数
+NVAR    NPOP   NSTR1   NEVA   PM    CM   ISEED
+7      100    30      5     0.001   1.0  -1         GA2 parameters
+>>>parameters of Rosenbrock optimization for further tunning<<<  // Rosenbrock算法参数
+IOPRSB  TOLX   TOLF    ITMXRS  IPRT
+0     1.e-6   1.e-7     25      0     (If IOPRSB.eq.0 then no Rosen. Opt.)
+>>>parameters of Simplex optimization for further tunning<<<  // Simplex算法参数
+IOPSMP  ATOL   TOLF    ITMXSP  IPRT
+0         1.e-6   1.e-7   25      0     (If IOPSMP.eq.0 then no Simplex. Opt.)
